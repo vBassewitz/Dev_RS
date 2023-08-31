@@ -22,7 +22,7 @@ output: ../report/
 # Path to the sheet holding metadata information
 metadata: config/pep/metadata.txt
 # Remove columns from analysis
-remove-columns: ["medication"]
+remove-columns: ["site-name"]
 # Paths to the databases used for classification and taxonomy
 database:
   download-path-seq: https://data.qiime2.org/2022.2/common/silva-138-99-seqs.qza
@@ -77,9 +77,9 @@ filtering:
   perc-query-aligned: 0.93
 # Parameters for plots
 metadata-parameters:
-  taxa-heatmap-column: subject
-  beta-metadata-column: subject
-  gneiss-metadata-column: swab_site
+  taxa-heatmap-column: extract-group-no
+  beta-metadata-column: extract-group-no
+  gneiss-metadata-column: site-name
   # Specify which axes to cluster: ('features', 'samples', 'both', 'none')
   cluster: features
 # Parameters for classification
@@ -198,4 +198,4 @@ songbird:
 # Feature classification with ancom
 ancom:
   # Catgorical metadata column to analyse
-  metadata-column: ["subject"]
+  metadata-column: ["extract-group-no"]
